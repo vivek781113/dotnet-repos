@@ -13,18 +13,14 @@ namespace ServiceAPI.Controllers
 {
     public abstract class BaseApiController : ApiController
     {
-        private readonly IEprocRepository _eprocRepository;
+        public IEasyBuyRepository EasyBuyRepo { get; }
 
-        public IEprocRepository EprocRepository => _eprocRepository;
+        public IEprocRepository EprocRepo { get; }
 
-        protected BaseApiController()
+        protected BaseApiController(IEprocRepository eprocRepository, IEasyBuyRepository easyBuyRepository)
         {
-            var targetDataSrc = GetTargetSource();
-           // _dbRepository = _dbRepository ?? new DbRepository(targetDataSrc.dataSource, targetDataSrc.userId, targetDataSrc.password);
-        }
-        protected BaseApiController(IEprocRepository eprocRepository)
-        {
-            _eprocRepository = eprocRepository;
+            EprocRepo = eprocRepository;
+            EasyBuyRepo = easyBuyRepository;
         }
         
         private (string dataSource, string userId, string password) GetTargetSource()

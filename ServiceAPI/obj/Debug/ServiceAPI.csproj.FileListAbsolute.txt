@@ -68,3 +68,16 @@ D:\workspaces\dotnet\ServiceAPI\bin\DataAccessLayer.pdb
 D:\workspaces\dotnet\ServiceAPI\bin\Dapper.xml
 D:\workspaces\dotnet\ServiceAPI\bin\Oracle.ManagedDataAccess.dll
 D:\workspaces\dotnet\ServiceAPI\bin\DataAccessLayer.dll.config
+D:\workspaces\dotnet\ServiceAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\workspaces\dotnet\ServiceAPI\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\workspaces\dotnet\ServiceAPI\bin\System.Threading.Tasks.Extensions.dll
+D:\workspaces\dotnet\ServiceAPI\bin\Unity.Abstractions.dll
+D:\workspaces\dotnet\ServiceAPI\bin\Unity.AspNet.WebApi.dll
+D:\workspaces\dotnet\ServiceAPI\bin\Unity.Container.dll
+D:\workspaces\dotnet\ServiceAPI\bin\WebActivatorEx.dll
+D:\workspaces\dotnet\ServiceAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\workspaces\dotnet\ServiceAPI\bin\System.Threading.Tasks.Extensions.xml
+D:\workspaces\dotnet\ServiceAPI\bin\Unity.Abstractions.pdb
+D:\workspaces\dotnet\ServiceAPI\bin\Unity.AspNet.WebApi.pdb
+D:\workspaces\dotnet\ServiceAPI\bin\Unity.AspNet.WebApi.xml
+D:\workspaces\dotnet\ServiceAPI\bin\Unity.Container.pdb

@@ -5,16 +5,12 @@ using System.Web.Http;
 namespace ServiceAPI.Controllers
 {
     [RoutePrefix("api/task")]
-    public class TaskController : ApiController
+    public class TaskController : BaseApiController
     {
-        private readonly IEprocRepository _eprocRepository;
-        private readonly EasyBuyRepository _easyBuyRepository;
-
-        public TaskController()
+        
+        public TaskController(IEprocRepository eprocRepository, IEasyBuyRepository easyBuyRepository) 
+            : base(eprocRepository, easyBuyRepository)
         {
-            _eprocRepository = _eprocRepository ?? new EprocRepository();
-            _easyBuyRepository = _easyBuyRepository ?? new EasyBuyRepository();
-
         }
 
         //*Mark represnt optional parameter
@@ -24,11 +20,11 @@ namespace ServiceAPI.Controllers
 
         [HttpGet]
         [Route("getRfqStatusByPr/{prNumber}")]
-        public IHttpActionResult GetRfqStatusByPr(string prNumber) => Ok(_eprocRepository.GetQuotationMasters(prNumber).ToList());
+        public IHttpActionResult GetRfqStatusByPr(string prNumber) => Ok(EprocRepo.GetQuotationMasters(prNumber).ToList());
 
         [HttpGet]
         [Route("getCartDetails")]
-        public IHttpActionResult GetCartDetails() => Ok(_easyBuyRepository.GetCartDetails().ToList());
+        public IHttpActionResult GetCartDetails() => Ok(EasyBuyRepo.GetCartDetails().ToList());
 
     }
 }
